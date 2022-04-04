@@ -25,24 +25,24 @@
         <div class="pratos">  
             <h2>Primeiro, seu prato</h2> 
             <div class="opcoes">
-                <div class="opcao1"> 
+                <div id="contra-file" class="opcao1" onclick="selecionarPrato1()"> 
                     <img src="https://www.dicasonline.com/wp-content/uploads/Quanto-tempo-cada-tipo-de-carne-deve-ficar-na-grelha-758x396.jpg"> 
                     <h3>Contra-filé</h3> 
                     <h5>Acompanhado com batata canoa e a salada da casa</h5> 
                     <h4>R$84,99</h4>
                 </div> 
 
-                <div class="opcao1"> 
+                <div id="salmao" class="opcao1"  onclick="selecionarPrato2()"> 
                     <img src="https://www.receitas-sem-fronteiras.com/uploads/recipe/receita-do-dia-salmao-grelhado-ao-molho-de-maracuja_crop.jpg?1549459000"> 
                     <h3>Salmão</h3> 
-                    <h5>Acompanhado de legumes salteados e dadinhos de tapioca</h5> 
+                    <h5>Acompanhado de legumes salteados e de especiarias</h5> 
                     <h4>R$109,99</h4>
                 </div> 
 
-                <div class="opcao1"> 
+                <div id="risoto" class="opcao1"  onclick="selecionarPrato3()"> 
                     <img src="https://img.cybercook.com.br/receitas/216/risoto-de-camarao-7.jpeg"> 
-                    <h3>Risoto de Camarão</h3> 
-                    <h5>Acompanhado de uma salada e legumes salteados</h5> 
+                    <h3>Risoto</h3> 
+                    <h5>Camarão ou Carne Seca</h5> 
                     <h4>R$68,99</h4>
                 </div>
             </div>
@@ -51,23 +51,23 @@
         <div class="bebidas">
             <h2>Agora, sua bebida</h2> 
             <div class="opcoes">
-                <div class="opcao1"> 
+                <div id="agua" class="opcao1" onclick="selecionarBebida1()"> 
                     <img src="https://www.rbsdirect.com.br/imagesrc/25454033.jpg?w=700"> 
                     <h3>Água-mineral</h3> 
                     <h5>Garrafa 500ml</h5> 
                     <h4>R$2,99</h4>
                 </div> 
 
-                <div class="opcao1"> 
+                <div id="suco" class="opcao1" onclick="selecionarBebida2()"> 
                     <img src="https://anoteareceita.com.br/wp-content/uploads/2020/03/receitas-de-sucos-naturais-e1584495624384.jpg"> 
                     <h3>Suco Natural</h3> 
                     <h5>Limão, kiwi, Melância, Abacaxi</h5> 
                     <h4>R$4,99</h4>
                 </div> 
 
-                <div class="opcao1"> 
+                <div id="refri" class="opcao1" onclick="selecionarBebida3()"> 
                     <img src="https://uploads.metropoles.com/wp-content/uploads/2021/12/06093057/refrigerante-1.jpg"> 
-                    <h3>Refrigerante geladinho</h3> 
+                    <h3>Refrigerante</h3> 
                     <h5>Coca, Pepsi, Guaraná, Sprite</h5> 
                     <h4>R$4,99</h4>
                 </div>
@@ -77,21 +77,21 @@
         <div class="sobremesa">
             <h2>Por fim, sua sobremesa</h2> 
             <div class="opcoes">
-                <div class="opcao1"> 
+                <div id="ninho" class="opcao1" onclick="selecionarSobremesa1(),fecharPedido()"> 
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKS8jjLFnkupBbIoqu7t48vqGdysRhHt54Vg&usqp=CAU"> 
                     <h3>Mousse de Ninho</h3> 
                     <h5>Pedaço grande, aproximadamente 230g</h5> 
                     <h4>R$12,99</h4>
                 </div> 
 
-                <div class="opcao1"> 
+                <div id="profiterolis" class="opcao1" onclick="selecionarSobremesa2(),fecharPedido()"> 
                     <img src="http://f.i.uol.com.br/livraria/capas/images/16334280.jpeg"> 
                     <h3>Profiterólis</h3> 
                     <h5>Acompanhado de 3 bolas de sorvete de creme na taça</h5> 
                     <h4>R$9,99</h4>
                 </div> 
 
-                <div class="opcao1"> 
+                <div id="torta" class="opcao1" onclick="selecionarSobremesa3(),fecharPedido()"> 
                     <img src="https://img.cybercook.com.br/receitas/577/torta-alema-rei.jpeg"> 
                     <h3>Torta Alemã</h3> 
                     <h5>Pedaço grande, aproximadamente 230g</h5> 
@@ -102,8 +102,32 @@
         <!-- Cardápio --> 
 
         <div class="rodape">
-            <button><div>Selecione os 3 itens para fechar o pedido</div></button>
+            <button id="pedido" onclick="valorFinal()"><div>Selecione os 3 itens para fechar o pedido</div></button>
         </div>  
-    </div> 
+    </div>   
+    
+    <div class="caixa-pedido">
+        <h2>Confirme seu pedido</h2> 
+        <div class="nome-preco">
+            <h3>prato1</h3> 
+            <h3>R$100,00</h3>
+        </div> 
+        <div class="nome-preco">
+            <h3>prato1</h3> 
+            <h3>R$100,00</h3>
+        </div>  
+        <div class="nome-preco">
+            <h3>prato1</h3> 
+            <h3>R$100,00</h3>
+        </div>  
+        <div class="nome-preco">
+            <h3>prato1</h3> 
+            <h3>R$100,00</h3>
+        </div> 
+        <button>Tudo certo, pode pedir</button> 
+        <h4>Cancelar</h4> 
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
